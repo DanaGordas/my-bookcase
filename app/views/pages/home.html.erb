@@ -1,2 +1,8 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= image_path "second_background.jpg" %>');">
+  <div class="container">
+    <div class="centered">
+      <h1>Welcome to my personal bookcase!</h1>
+      <%= link_to "Enter", books_path, class: "btn btn-flat mt-5" %>
+    </div>
+  </div>
+</div>
