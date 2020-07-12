@@ -1,0 +1,10 @@
+<div class="container mt-3">
+  <h1>My Bookcase</h1>
+
+  <% @books.each do |b| %>
+    <ul>
+      <li><%= link_to b.name, book_path(b) %></li>
+    </ul>
+  <% end %>
+</div>
+

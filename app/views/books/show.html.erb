@@ -1,0 +1,16 @@
+<div class="container mt-3">
+  <h1><%= @book.name %></h1>
+  <p><strong>Author: </strong><%= @book.author.first_name %> <%= @book.author.last_name %></p>
+  <p><strong>Year of publication: </strong><%= @book.year %></p>
+  <p><strong>Original language: </strong><%= @book.original_language %></p>
+  <p><%= @book.description %></p>
+
+  <p><strong>Categories:</strong></p>
+  <% @book.book_categories.each do |bc| %>
+    <ul>
+      <li>
+        <%= bc.category.name %>
+      </li>
+    </ul>
+  <% end %>
+</div>
