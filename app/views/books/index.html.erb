@@ -1,18 +1,20 @@
 <div class="container mt-3">
   <h1>My Bookcase</h1>
 
-  <% @books.each do |b| %>
-    <div class="card-category">
-      <% if b.photo.attached? %>
-        <%= link_to book_path(b) do %>
-          <%= cl_image_tag(b.photo.key) %>
+  <div class="card-row">
+    <% @books.each do |b| %>
+      <div class="card-category">
+        <% if b.photo.attached? %>
+          <%= link_to book_path(b) do %>
+            <%= cl_image_tag(b.photo.key) %>
+          <% end %>
+        <% else %>
+          <%= link_to book_path(b) do %>
+            <%= image_tag 'book.jpg' %>
+          <% end %>
         <% end %>
-      <% else %>
-        <%= link_to book_path(b) do %>
-          <%= image_tag 'book.jpg' %>
-        <% end %>
-      <% end %>
-    </div>
-  <% end %>
+      </div>
+    <% end %>
+  </div>
 </div>
 

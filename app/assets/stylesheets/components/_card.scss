@@ -1,9 +1,15 @@
+.card-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  column-gap: 10px;
+}
+
 .card-category {
   width: 200px;
   height: 250px;
   border-radius: 5px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  margin: 10px 5px 0 5px;
+  margin-top: 10px;
 }
 
 .card-category img {
