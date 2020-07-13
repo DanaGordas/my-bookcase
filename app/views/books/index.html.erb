@@ -2,9 +2,17 @@
   <h1>My Bookcase</h1>
 
   <% @books.each do |b| %>
-    <ul>
-      <li><%= link_to b.name, book_path(b) %></li>
-    </ul>
+    <div class="card-category">
+      <% if b.photo.attached? %>
+        <%= link_to book_path(b) do %>
+          <%= cl_image_tag(b.photo.key) %>
+        <% end %>
+      <% else %>
+        <%= link_to book_path(b) do %>
+          <%= image_tag 'book.jpg' %>
+        <% end %>
+      <% end %>
+    </div>
   <% end %>
 </div>
 
