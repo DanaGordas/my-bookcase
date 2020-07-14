@@ -1,16 +1,25 @@
 <div class="container mt-3">
-  <h1><%= @book.name %></h1>
-  <p><strong>Author: </strong><%= @book.author.first_name %> <%= @book.author.last_name %></p>
-  <p><strong>Year of publication: </strong><%= @book.year %></p>
-  <p><strong>Original language: </strong><%= @book.original_language %></p>
-  <p><%= @book.description %></p>
 
-  <p><strong>Categories:</strong></p>
-  <% @book.book_categories.each do |bc| %>
-    <ul>
-      <li>
-        <%= bc.category.name %>
-      </li>
-    </ul>
-  <% end %>
+  <div class="row">
+    <div class="col-12 col-lg-4">
+      <% if @book.photo.attached? %>
+        <%= cl_image_tag @book.photo.key, width: 300, height:400, crop: :scale %>
+      <% else %>
+        <%= image_tag 'book.jpg' %>
+      <% end %>
+    </div>
+    <div class="col-12 col-lg-8">
+      <h2><%= @book.name %></h2>
+      <ul class="list-inline">
+        <% @book.book_categories.each do |bc| %>
+          <p class="btn btn-outline-secondary btn-sm disabled">
+            <%= bc.category.name %>
+          </p>
+        <% end %>
+      </ul>
+      <p> <em>Written by <%= @book.author.first_name %> <%= @book.author.last_name %> and published in <%= @book.year %></em></p>
+      <p><strong>Original language: </strong><%= @book.original_language %></p>
+      <p><%= @book.description %></p>
+    </div>
+  </div>
 </div>
