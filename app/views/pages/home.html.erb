@@ -1,8 +1,13 @@
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= image_path "second_background.jpg" %>');">
   <div class="container">
     <div class="centered">
-      <h1>Welcome to my personal bookcase!</h1>
-      <%= link_to "Enter", books_path, class: "btn btn-flat mt-5" %>
+      <h1>Browse through my bookcase!</h1>
+      <p class="mt-3">Choose one of the subjects that interest you or look through all my recommendations and find the next book you'll love!</p>
+      <h3>Tags</h3>
+        <%= form_tag books_path, method: :get do |f| %>
+          <%= select_tag 'category', options_for_select(Category.all.map{|c| [c.name, c.id]}) %>
+          <%= submit_tag 'Search' %>
+        <% end %>
     </div>
   </div>
 </div>

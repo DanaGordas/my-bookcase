@@ -1,6 +1,11 @@
 class BooksController < ApplicationController
   def index
-    @books = Book.all
+    @categories = Category.all
+    if params[:category]
+      @books = Book.categorized_with(params[:category])
+    else
+      @books = Book.all
+    end
   end
 
   def show

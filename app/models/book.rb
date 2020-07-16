@@ -5,4 +5,8 @@ class Book < ApplicationRecord
   has_one_attached :photo
 
   validates :name, :description, presence: true
+
+  def self.categorized_with(category)
+    Category.find(category).books
+  end
 end

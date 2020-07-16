@@ -4,4 +4,5 @@ Rails.application.routes.draw do
   root to: 'pages#home'
 
   resources :books, only: [ :index, :show ]
+
 end
