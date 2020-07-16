@@ -3,11 +3,7 @@
     <div class="centered">
       <h1>Browse through my bookcase!</h1>
       <p class="mt-3">Choose one of the subjects that interest you or look through all my recommendations and find the next book you'll love!</p>
-      <h3>Tags</h3>
-        <%= form_tag books_path, method: :get do |f| %>
-          <%= select_tag 'category', options_for_select(Category.all.map{|c| [c.name, c.id]}) %>
-          <%= submit_tag 'Search' %>
-        <% end %>
+      <p><%= link_to 'Enter', books_path, class: "btn btn-outline-secondary" %></p>
     </div>
   </div>
 </div>

@@ -1,4 +1,10 @@
 <div class="container mt-3">
+  <div class="">
+    <%= link_to "All", books_path, class: "btn btn-outline-secondary" %>
+    <% @categories.each do |c| %>
+    <%= link_to c.name, books_path(category: c.name), class: "btn btn-outline-secondary" %>
+    <% end %>
+  </div>
   <div class="card-row">
     <% @books.each do |b| %>
       <div class="card-category">

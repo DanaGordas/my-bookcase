@@ -7,6 +7,6 @@ class Book < ApplicationRecord
   validates :name, :description, presence: true
 
   def self.categorized_with(category)
-    Category.find(category).books
+    Category.find_by_name(category).books
   end
 end
