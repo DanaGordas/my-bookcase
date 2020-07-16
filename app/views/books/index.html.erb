@@ -1,25 +1,24 @@
 <div class="container mt-3">
-  <div class="">
-    <%= link_to "All", books_path, class: "btn btn-outline-secondary" %>
+  <div class="nav">
+    <%= link_to "All", books_path, class: "active nav-item" %>
     <% @categories.each do |c| %>
-    <%= link_to c.name, books_path(category: c.name), class: "btn btn-outline-secondary" %>
+    <%= link_to c.name, books_path(category: c.name), class: "nav-item" %>
     <% end %>
   </div>
-  <div class="card-row">
+
+  <div class="cards mt-3">
+
     <% @books.each do |b| %>
-      <div class="card-category">
+      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
         <% if b.photo.attached? %>
-          <%= link_to book_path(b) do %>
-            <%= cl_image_tag(b.photo.key) %>
-          <% end %>
+          url('<%= cl_image_path b.photo.key %>')
         <% else %>
-          <%= link_to book_path(b) do %>
-            <%= image_tag 'book.jpg' %>
-          <% end %>
-        <% end %>
+          url(<%= image_path 'book.jpg' %>)
+        <% end %> ">
+        <%= link_to b.name, book_path(b)  %>
       </div>
     <% end %>
+
   </div>
 
 </div>
-
