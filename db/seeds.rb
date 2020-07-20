@@ -58,6 +58,11 @@ category5 = Category.create(name: "Children")
 category6 = Category.create(name: "Non-fiction")
 category7 = Category.create(name: "LGBTQ")
 category8 = Category.create(name: "American")
+category9 = Category.create(name: "Classic")
+category10 = Category.create(name: "Historical fiction")
+category11 = Category.create(name: "Poetry")
+category11 = Category.create(name: "Science-fiction")
+category12 = Category.create(name: "Short-story")
 
 
 ### Book Categories

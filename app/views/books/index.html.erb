@@ -11,7 +11,7 @@
     <% @books.each do |b| %>
       <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
         <% if b.photo.attached? %>
-          url('<%= cl_image_path b.photo.key %>')
+          url('<%= cl_image_path b.photo.key, :opacity=>50 %>')
         <% else %>
           url(<%= image_path 'book.jpg' %>)
         <% end %> ">
