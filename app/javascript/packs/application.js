@@ -27,10 +27,10 @@ import "bootstrap";
 
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
-import { makeActive } from '../components/make_active';
+// import { makeActive } from '../components/make_active';
 
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
-  makeActive();
+  // makeActive();
 });
