@@ -23,6 +23,10 @@ gem 'jbuilder', '~> 2.7'
 # gem 'bcrypt', '~> 3.1.7'
 # use to add active class
 gem 'active_link_to'
+# use for admin purposes
+gem 'devise'
+gem 'activeadmin'
+gem 'inherited_resources'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'

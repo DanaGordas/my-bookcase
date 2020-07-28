@@ -6,6 +6,7 @@ Author.destroy_all
 Book.destroy_all
 Category.destroy_all
 BookCategory.destroy_all
+AdminUser.destroy_all
 
 
 ### Authors
@@ -86,5 +87,8 @@ BookCategory.create(book: book7,  category: category1 )
 BookCategory.create(book: book7,  category: category7 )
 BookCategory.create(book: book7,  category: category8 )
 
+### Admin
+
+AdminUser.create!(email:'dana@gmail.com', password: '123456', password_confirmation: '123456')
 
 puts "Finished!"
