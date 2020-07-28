@@ -2,11 +2,15 @@
   <div class="nav">
     <%= active_link_to "All", books_path, wrap_class: 'nav-item' %>
     <% @categories.each do |c| %>
+    <!-- we pass the category name as a parameter to the books path to be used in the index method -->
     <%= active_link_to c.name, books_path(category: c.name), active: { category: c.name }, wrap_class: 'nav-item' %>
     <% end %>
   </div>
 
   <div class="cards mt-3 mb-3">
+<!--
+    iterate through all the books and show the picture from cloudinary (if present)
+    or the placeholder picture -->
 
     <% @books.each do |b| %>
       <div class="card-category">
