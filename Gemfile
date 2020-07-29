@@ -24,9 +24,9 @@ gem 'jbuilder', '~> 2.7'
 # use to add active class
 gem 'active_link_to'
 # use for admin purposes
+gem 'inherited_resources', git: 'https://github.com/activeadmin/inherited_resources'
+gem 'activeadmin', git: 'https://github.com/activeadmin/activeadmin'
 gem 'devise'
-gem 'activeadmin'
-gem 'inherited_resources'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
