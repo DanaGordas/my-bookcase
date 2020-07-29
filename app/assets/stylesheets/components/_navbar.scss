@@ -1,12 +1,27 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background: $light-gray;
+  background: white;
 }
 
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
+.navbar-lewagon li {
+  font-weight: 700;
+  font-size: 19px;
+  text-transform: uppercase;
+  color: $dark-purple;
+  padding: 10px;
+  margin-bottom: -5px;
 }
+
+.navbar-lewagon h3 {
+  font-weight: 700;
+  margin-bottom: -5px;
+}
+
+// .navbar-lewagon .navbar-collapse {
+//   flex-grow: 0;
+// }
 
 .navbar-lewagon .navbar-brand img {
   width: 40px;
+  height: 40px;
 }

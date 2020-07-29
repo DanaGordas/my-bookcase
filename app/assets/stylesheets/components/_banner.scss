@@ -1,27 +1,75 @@
 .banner {
-  background-size: cover;
-  background-position: center;
-  padding: 150px 0;
+  // background-size: cover;
+  // background-position: center;
+  padding: 30px 0;
   text-align: center;
 }
 
-.banner h1 {
+.banner h2 {
   margin: 0;
-  color: $gray;
+  color: $dark-purple;
   // text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  font-size: 32px;
-  font-weight: bold;
+  text-decoration: underline;
+  text-underline-position: under;
+  font-weight: 700;
+  font-size: 150%;
+  letter-spacing: .135em;
+  margin-bottom: 0.133em;
+  padding-bottom: 0.133em;
+  text-transform: uppercase;
 }
 
 .banner p {
-  font-size: 20px;
-  color: $gray;
+  font-size: 120%;
+  color: $dark-purple;
   opacity: .9;
   // text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
 }
 
 .banner a {
-  margin-top: 10px;
+  letter-spacing: .135em;
 }
 
+.card-description {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.description {
+  background-color: white;
+  box-shadow: 0 0 7px rgba(0,0,0,0.2);
+  text-align: justify;
+  text-justify: none;
+}
+
+.description p {
+  font-weight: 200;
+  font-size: 110%;
+  color: $dark-purple;
+  margin: 40px;
+}
+
+// .about a {
+//   font-weight: 400;
+//   font-size: 120%;
+//   color: $dark-purple;
+// }
+
+.description h4 {
+  font-weight: 500;
+  font-size: 110%;
+  color: $dark-purple;
+  margin: 40px;
+  text-transform: uppercase;
+  letter-spacing: .135em;
+  text-decoration: underline;
+  text-underline-position: under;
+}
+
+
+.photo img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
 
