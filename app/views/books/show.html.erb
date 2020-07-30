@@ -2,32 +2,35 @@
 
   <div class="row">
 
-    <div class="col-12 col-lg-4">
+    <div class="row card-description">
+      <div class="col-12 col-lg-4 book-photo">
+        <!-- show the book photo if attached. if not show the placeholder -->
+        <div>
+          <% if @book.photo.attached? %>
+            <%= cl_image_tag @book.photo.key %>
+          <% else %>
+            <%= image_tag 'book.jpg' %>
+          <% end %>
+        </div>
+      </div>
 
-      <!-- show the book photo if attached. if not show the placeholder -->
-
-      <% if @book.photo.attached? %>
-        <%= cl_image_tag @book.photo.key, width: 300, height:400, crop: :scale %>
-      <% else %>
-        <%= image_tag 'book.jpg' %>
-      <% end %>
-    </div>
-
-<!--     display name, categories, author name, original language, date of publishing
+      <!--  display name, categories, author name, original language, date of publishing
     and description of the instance of book -->
-
-    <div class="col-12 col-lg-8">
-      <h2><%= @book.name %></h2>
-      <ul class="list-inline">
-        <% @book.book_categories.each do |bc| %>
-          <p class="btn btn-outline-secondary btn-sm disabled">
-            <%= bc.category.name %>
-          </p>
-        <% end %>
-      </ul>
-      <p> <em>Written by <%= @book.author.first_name %> <%= @book.author.last_name %> and published in <%= @book.year %></em></p>
-      <p><strong>Original language: </strong><%= @book.original_language %></p>
-      <p><%= @book.description %></p>
+      <div class="col-12 col-lg-8 book-description">
+        <div>
+          <h4><%= @book.name %></h4>
+          <p> <em>Written by <strong><%= @book.author.first_name %> <%= @book.author.last_name %></strong> and published in <strong> <%= @book.year %></strong></em></p>
+          <ul class="list-inline">
+            <% @book.book_categories.each do |bc| %>
+              <p class="btn btn-outline-secondary btn-sm disabled list-inline-item">
+                <%= bc.category.name %>
+              </p>
+            <% end %>
+          </ul>
+          <p><strong>Original language: </strong><%= @book.original_language %></p>
+          <p><%= @book.description %></p>
+        </div>
+      </div>
     </div>
 
   </div>
