@@ -51,6 +51,12 @@ ActiveAdmin.register Book do
         render :new
       end
     end
+
+    def destroy
+      @book = Book.find(params[:id])
+      @book.destroy
+      redirect_to admin_books_path, notice: 'Your book has been deleted!'
+    end
   end
 
 end
