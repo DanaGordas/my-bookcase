@@ -22,7 +22,7 @@
           <p> <em>Written by <strong><%= @book.author.first_name %> <%= @book.author.last_name %></strong> and published in <strong> <%= @book.year %></strong></em></p>
           <div class="list-inline">
             <% @book.book_categories.each do |bc| %>
-              <p class="list-inline-item btn btn-outline-primary "><%= link_to bc.category.name, books_path(category: bc.category.name) %></p>
+              <p class="list-inline-item"><%= link_to bc.category.name, books_path(category: bc.category.name), class: "btn btn-outline-primary", style: "text-decoration: none;" %></p>
             <% end %>
           </div>
           <p><strong>Original language: </strong><%= @book.original_language %></p>
