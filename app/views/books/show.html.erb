@@ -20,13 +20,11 @@
         <div>
           <h4><%= @book.name %></h4>
           <p> <em>Written by <strong><%= @book.author.first_name %> <%= @book.author.last_name %></strong> and published in <strong> <%= @book.year %></strong></em></p>
-          <ul class="list-inline">
+          <div class="list-inline">
             <% @book.book_categories.each do |bc| %>
-              <p class="btn btn-outline-secondary btn-sm disabled list-inline-item">
-                <%= bc.category.name %>
-              </p>
+              <p class="list-inline-item btn btn-outline-primary "><%= link_to bc.category.name, books_path(category: bc.category.name) %></p>
             <% end %>
-          </ul>
+          </div>
           <p><strong>Original language: </strong><%= @book.original_language %></p>
           <p><%= @book.description %></p>
         </div>

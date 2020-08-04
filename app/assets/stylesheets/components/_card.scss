@@ -1,16 +1,3 @@
-// .card-row {
-//   display: grid;
-//   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-// }
-
-// .card-category {
-//   width: 180px;
-//   height: 250px;
-//   border-radius: 5px;
-//   box-shadow: 0 0 15px rgba(0,0,0,0.2);
-//   margin-top: 10px;
-// }
-
 .cards {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
@@ -21,7 +8,10 @@
   overflow: hidden;
   background: white;
   // box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  border: solid $light-purple;
+}
+
+.card-category:hover {
+  box-shadow: 0 0 20px rgba(0,0,0,0.7);
 }
 
 .card-category img {
@@ -30,6 +20,7 @@
   object-fit: cover;
   border-radius: 2px;
 }
+
 
 
 // Smallest device
