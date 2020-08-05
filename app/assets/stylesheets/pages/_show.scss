@@ -6,13 +6,12 @@
   text-justify: none;
   border-radius: 2px;
   background-color: white;
+  padding: 50px;
 }
 
 .book-description p {
   font-weight: 300;
   color: $dark-purple;
-  margin-right: 40px;
-  margin-left: 40px;
   letter-spacing: .100em;
 }
 
@@ -21,10 +20,6 @@
   font-weight: 500;
   font-size: 110%;
   color: $dark-purple;
-  margin-right: 40px;
-  margin-left: 40px;
-  margin-top: 40px;
-  margin-bottom: 20px;
   text-transform: uppercase;
   letter-spacing: .135em;
   text-decoration: underline;
