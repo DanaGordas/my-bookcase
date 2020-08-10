@@ -1,0 +1,21 @@
+.banner {
+  // background-size: cover;
+  // background-position: center;
+  padding: 30px 0;
+  text-align: center;
+}
+
+.banner h2 {
+  margin: 0;
+  color: $dark-purple;
+  // text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  text-decoration-line: underline;
+  text-underline-position: under;
+  font-weight: 700;
+  font-size: 150%;
+  letter-spacing: .135em;
+  margin-bottom: 0.133em;
+  padding-bottom: 0.133em;
+  text-transform: uppercase;
+}
+
