@@ -5,8 +5,6 @@ Rails.application.routes.draw do
   get 'books/show'
   root to: 'pages#home'
 
-  get 'about', to: 'pages#about', as: 'about'
-
   resources :books, only: [ :index, :show, :new, :create, :edit, :update ]
 
 end
