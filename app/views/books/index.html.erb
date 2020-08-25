@@ -1,11 +1,6 @@
 <div class="container mt-3">
 
-  <div class="row">
-    <div class="col-12 col-lg-12 banner">
-      <h2>My bookcase</h2>
-    </div>
-  </div>
-  <div class="list-inline list">
+  <div class="list-inline list mt-5">
     <p class="list-inline-item"><%= link_to "All", books_path%></p>
     <% @categories.each do |c| %>
     <!-- we pass the category name as a parameter to the books path to be used in the index method -->
@@ -19,7 +14,7 @@
     or the placeholder picture -->
 
     <% @books.each do |b| %>
-      <div class="card-category">
+      <div class="card-book">
         <% if b.photo.attached? %>
           <%= link_to book_path(b) do %>
               <%= cl_image_tag(b.photo.key) %>

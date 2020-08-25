@@ -4,17 +4,21 @@
   grid-gap: 16px;
 }
 
-.card-category {
-  overflow: hidden;
+.card-book * {
   background: white;
-  // box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  box-sizing: border-box;
 }
 
-.card-category:hover {
-  box-shadow: 0 0 20px rgba(0,0,0,0.7);
+.card-book {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
 }
 
-.card-category img {
+.card-book:hover img {
+  transform: scale(1.2);
+  transition: transform 500ms ease-in;
+}
+
+.card-book img {
   height: 100%;
   width: 100%;
   object-fit: cover;
