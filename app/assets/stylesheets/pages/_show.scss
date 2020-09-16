@@ -1,27 +1,15 @@
-// the style for .card-description can be found in assets/stylesheets/components/_banner.scss
-
 .book-description {
   box-shadow: 0 0 7px rgba(0,0,0,0.2);
   text-align: justify;
   text-justify: none;
   border-radius: 2px;
   background-color: white;
-  padding: 50px;
-}
-
-.book-description p {
-  font-weight: 300;
+  padding: 40px;
   color: $dark-purple;
-  letter-spacing: .100em;
 }
-
 
 .book-description h4 {
-  font-weight: 500;
-  font-size: 110%;
-  color: $dark-purple;
   text-transform: uppercase;
-  letter-spacing: .135em;
   text-decoration: underline;
   text-underline-position: under;
 }
