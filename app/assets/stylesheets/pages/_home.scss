@@ -44,8 +44,17 @@ section p {
 
 .hero-content-area {
   opacity: 0;
-  margin-top: 100px;
-  animation: 1s slidefade 1s forwards;
+  margin-top: 8px;
+  animation: slidefade 1s forwards;
+}
+
+.hero-content-area h3 {
+  font: 30px bold;
+}
+
+.hero-content-area p {
+  font-size: 18px;
+  margin-top: 20px;
 }
 
 @keyframes slidefade {
@@ -57,6 +66,11 @@ section p {
 
 
 // Book styles
+
+.books {
+  display: flex;
+  justify-content: space-around;
+}
 
 .book {
   animation: stack .3s linear forwards;
