@@ -26,7 +26,9 @@
             <% end %>
           </div>
           <p><strong>Original language: </strong><%= @book.original_language %></p>
+          <% name = @book.name %>
           <p><%= @book.description %></p>
+          <a href="https://www.goodreads.com/search?q=<%= @book.name %>" target="_blank" class="btn btn-outline-primary" style="text-decoration: none">Search on Goodreads</a>
         </div>
       </div>
     </div>

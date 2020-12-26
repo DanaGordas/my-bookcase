@@ -1,9 +1,11 @@
 .list {
   margin-top: 10px;
   display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-
+  justify-content: space-evenly;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  width: 100%;
+  scroll-behavior: smooth;
 }
 
 .list a {
@@ -13,6 +15,7 @@
   position: relative;
   display: inline-block;
   padding: 10px 10px;
+  flex-shrink: 0;
 }
 
 .list a:after {
@@ -32,9 +35,5 @@
   left: 0;
 }
 
-// .list a:hover {
-//   text-decoration: underline;
-//   text-underline-position: under;
-// }
 
 
